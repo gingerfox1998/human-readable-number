@@ -16,16 +16,16 @@ module.exports = function toReadable (number) {
     return tens;
   }
   if((number > 99) && (number < 1000)) {
-    var hundred = numarr[numstrarr[0]] + ' hundred';
+    var hundreds = numarr[numstrarr[0]] + ' hundred';
         if(numarr[number]) {
-            hundred = hundred + ' ' + numarr[number];
-            return hundred;
+            hundreds = hundreds + ' ' + numarr[number];
+            return hundreds;
         }
           else if((number > 20) && (number < 100)) {
             var ten = numstrarr[0] * 10;
             var tens = numarr[ten] + ' ' + numarr[numstrarr[1]];
-            hundred = hundred + ' ' + tens;
-            return tens;
+            hundreds = hundreds + ' ' + tens;
+            return hundreds;
           }
     }
 }
