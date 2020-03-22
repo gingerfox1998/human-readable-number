@@ -12,7 +12,7 @@ module.exports = function toReadable (number) {
   }
   else if((number > 20) && (number < 100)) {
     var ten = numstrarr[0] * 10;
-    var tens = numarr[ten];
+    var tens = numarr[ten] + ' ' + numarr[numstrarr[1]];
     return tens + numarr[numstrarr[1]];
   }
   if((number > 99) && (number < 1000)) {
