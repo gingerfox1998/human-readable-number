@@ -6,6 +6,9 @@ module.exports = function toReadable (number) {
     13:'thirteen', 14:'fourteen', 15:'fifteen', 16:'sixteen', 17:'seventeen', 18:'eighteen', 19:'nineteen', 20:'twenty', 
     30:'thirty', 40:'forty', 50:'fifty', 60:'sixty', 70:'seventy', 80:'eighty', 90:'ninety'
   }
+  if((number > 0) && (number < 21)) {
+    return numarr[number];
+  }
   var numstrarr = number.toString();
   if((number > 99) && (number < 1000)) {
     var hundred = numarr[numstrarr[0]] + ' hundred';
@@ -18,9 +21,6 @@ module.exports = function toReadable (number) {
             return hundred + tens + numstrarr[1];
         }
     }
-  if((number > 0) && (number < 21)) {
-    return numarr[number];
-  }
   if((number > 20) && (number < 100)) {
     var ten = numstrarr[0] * 10;
     var tens = numarr[ten];
