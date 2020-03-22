@@ -27,8 +27,8 @@ module.exports = function toReadable (number) {
         return hundreds;
     }
     else if((withouthund > 20) && (withouthund < 100)) {
-        var tenh = withouthund[0] * 10;
-        hundreds = numarr[hundred] + ' ' + numarr[tenh] + ' ' + numarr[withouthund[1]];
+        var tenh = withoutarr[0] * 10;
+        hundreds = numarr[hundred] + ' ' + numarr[tenh] + ' ' + numarr[withoutarr[1]];
         return hundreds;
     }
  }
