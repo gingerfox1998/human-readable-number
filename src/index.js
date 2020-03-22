@@ -10,6 +10,11 @@ module.exports = function toReadable (number) {
     return numarr[number];
   }
   var numstrarr = number.toString();
+  else if((number > 20) && (number < 100)) {
+    var ten = numstrarr[0] * 10;
+    var tens = numarr[ten];
+    return tens + numarr[numstrarr[1]];
+  }
   if((number > 99) && (number < 1000)) {
     var hundred = numarr[numstrarr[0]] + ' hundred';
         if((number > 0) && (number < 21)) {
@@ -21,9 +26,4 @@ module.exports = function toReadable (number) {
             return hundred + tens + numstrarr[1];
         }
     }
-  if((number > 20) && (number < 100)) {
-    var ten = numstrarr[0] * 10;
-    var tens = numarr[ten];
-    return tens + numstrarr[1];
-  }
 }
