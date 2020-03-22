@@ -15,7 +15,7 @@ module.exports = function toReadable (number) {
     var tens = numarr[ten] + ' ' + numarr[numstrarr[1]];
     return tens;
   }
-  if((number > 99) && (number < 1000)) {
+  else if((number > 99) && (number < 1000)) {
     var hundreds = numarr[numstrarr[0]] + ' hundred';
     var tensforhund = number - numarr[numstrarr[0]] * 100;
         if(numarr[tensforhund]) {
