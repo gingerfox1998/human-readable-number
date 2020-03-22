@@ -19,7 +19,7 @@ module.exports = function toReadable (number) {
         }
     }
   if((number > 0) && (number < 21)) {
-    return numstrarr[0];
+    return numarr[numstrarr[0]];
   }
   if((number > 20) && (number < 100)) {
     var ten = numstrarr[0] * 10;
