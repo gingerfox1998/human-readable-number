@@ -19,9 +19,16 @@ module.exports = function toReadable (number) {
   }
  else if((number > 99) && (number < 1000)) {
     var hundred = numstrarr[0] * 100;
+    var hundreds;
     var withouthund = number - hundred;
+    var withoutarr = withouthund.toString();
     if(numarr[withouthund]) {
-        var hundreds = numarr[hundred] + ' ' + numarr[withouthund];
+        hundreds = numarr[hundred] + ' ' + numarr[withouthund];
+        return hundreds;
+    }
+    else if((withouthund > 20) && (withouthund < 100)) {
+        var tenh = numstrarr[0] * 10;
+        hundreds = numarr[hundred] + ' ' + numarr[tenh] + ' ' + numarr[numstrarr[1]];
         return hundreds;
     }
  }
