@@ -17,11 +17,12 @@ module.exports = function toReadable (number) {
   }
   if((number > 99) && (number < 1000)) {
     var hundreds = numarr[numstrarr[0]] + ' hundred';
-        if(numarr[number]) {
-            hundreds = hundreds + ' ' + numarr[number];
+    var tensforhund = number - numarr[numstrarr[0]] * 100;
+        if(numarr[tensforhund]) {
+            hundreds = hundreds + ' ' + numarr[tensforhund];
             return hundreds;
         }
-          else if((number > 20) && (number < 100)) {
+          else if((tensforhund > 20) && (tensforhund < 100)) {
             var ten = numstrarr[0] * 10;
             var tens = numarr[ten] + ' ' + numarr[numstrarr[1]];
             hundreds = hundreds + ' ' + tens;
