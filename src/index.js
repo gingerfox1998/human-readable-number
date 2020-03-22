@@ -19,14 +19,14 @@ module.exports = function toReadable (number) {
     var hundreds = numarr[numstrarr[0]] + ' hundred';
     var tensforhund = number - numarr[numstrarr[0]] * 100;
         if(numarr[tensforhund]) {
-            hundreds = hundreds + ' ' + numarr[tensforhund];
-            return hundreds;
+            var newhundreds = hundreds + ' ' + numarr[tensforhund];
+            return newhundreds;
         }
-          else if((tensforhund > 20) && (tensforhund < 100)) {
+        else if((tensforhund > 20) && (tensforhund < 100)) {
             var ten = numstrarr[0] * 10;
             var tens = numarr[ten] + ' ' + numarr[numstrarr[1]];
             hundreds = hundreds + ' ' + tens;
             return hundreds;
-          }
+        }
     }
 }
